@@ -239,7 +239,7 @@ function PostCard({
   );
 }
 
-export default function LoveLeighannMarieVolpeHomeMock() {
+export default function LoveLeighannMarieHomeMock() {
   const [query, setQuery] = useState("");
   const [cat, setCat] = useState<string>("all");
 
@@ -270,7 +270,7 @@ export default function LoveLeighannMarieVolpeHomeMock() {
               <div className="leading-tight">
                 <div className="text-base md:text-lg font-semibold tracking-tight">
                   Love Leighann Marie
-                  <span className="text-black/50"> Volpe</span>
+                  <span className="text-black/50"></span>
                 </div>
                 <div className="text-xs text-black/60">
                   Home, family, food, and everyday joy.
@@ -680,7 +680,7 @@ export default function LoveLeighannMarieVolpeHomeMock() {
           <div className="grid gap-6 md:grid-cols-3">
             <div className="space-y-3">
               <div className="text-lg font-semibold tracking-tight">
-                Love Leighann Marie <span className="text-black/50">Volpe</span>
+                Love Leighann Marie <span className="text-black/50"></span>
               </div>
               <p className="text-sm text-black/70">
                 Cozy home ideas, family life, and recipes that feel like a hug.
@@ -731,7 +731,7 @@ export default function LoveLeighannMarieVolpeHomeMock() {
           </div>
 
           <div className="mt-8 text-xs text-black/60">
-            © {new Date().getFullYear()} Love Leighann Marie Volpe
+            © {new Date().getFullYear()} Love Leighann Marie
           </div>
         </div>
       </footer>
