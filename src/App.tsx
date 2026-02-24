@@ -100,12 +100,9 @@ function Pill({ children }: { children: React.ReactNode }) {
   );
 }
 
-function NavLink({ label }: { label: string }) {
+function NavLink({ label, href }: { label: string; href: string }) {
   return (
-    <a
-      href="#"
-      className="text-sm text-black/70 hover:text-black transition"
-    >
+    <a href={href} className="text-sm text-black/70 hover:text-black transition">
       {label}
     </a>
   );
@@ -282,15 +279,15 @@ export default function LoveLeighannMarieVolpeHomeMock() {
             </div>
 
             <nav className="hidden md:flex items-center gap-5">
-              <NavLink label="Home" />
-              <NavLink label="Blog" />
-              <NavLink label="Recipes" />
-              <NavLink label="Home & Family" />
-              <NavLink label="Beauty & Style" />
-              <NavLink label="About" />
-              <NavLink label="Work With Me" />
-              <NavLink label="Shop" />
-              <NavLink label="Contact" />
+              <NavLink label="Home" href="#top" />
+              <NavLink label="Blog" href="#blog" />
+              <NavLink label="Recipes" href="#recipes" />
+              <NavLink label="Home & Family" href="#home-family" />
+              <NavLink label="Beauty & Style" href="#beauty-style" />
+              <NavLink label="About" href="#about" />
+              <NavLink label="Work With Me" href="#work" />
+              <NavLink label="Shop" href="#shop" />
+              <NavLink label="Contact" href="#contact" />
             </nav>
 
             <div className="flex items-center gap-2">
@@ -312,7 +309,7 @@ export default function LoveLeighannMarieVolpeHomeMock() {
       </header>
 
       {/* Hero */}
-      <main className="mx-auto max-w-6xl px-4">
+      <main id="top" className="mx-auto max-w-6xl px-4">
         <section className="pt-10 md:pt-14">
           <div className="grid gap-6 md:grid-cols-2 md:items-center">
             <motion.div
@@ -481,7 +478,7 @@ export default function LoveLeighannMarieVolpeHomeMock() {
         </section>
 
         {/* Latest posts */}
-        <section className="mt-12 md:mt-16">
+        <section id="blog" className="mt-12 md:mt-16">
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <SectionTitle
               eyebrow="Fresh"
@@ -571,6 +568,65 @@ export default function LoveLeighannMarieVolpeHomeMock() {
                 </a>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* About / Work / Shop / Contact placeholders (wire these to real pages later) */}
+        <section id="about" className="mt-12 md:mt-16">
+          <SectionTitle
+            eyebrow="About"
+            title="A little about Leighann"
+            subtitle="This is a placeholder section for the demo. On the real site, this becomes a full About page with photos, story, and trust-building details."
+          />
+          <div className="mt-6 rounded-3xl border border-black/10 bg-white/70 p-6 shadow-sm backdrop-blur">
+            <p className="text-sm md:text-base text-black/70 max-w-3xl">
+              Hi — I’m Leighann. I share cozy recipes, simple home routines, and real-life moments that help busy families feel more grounded.
+              This space is all about practical comfort: food that works on weeknights, habits that stick, and little joys at home.
+            </p>
+          </div>
+        </section>
+
+        <section id="work" className="mt-12 md:mt-16">
+          <SectionTitle
+            eyebrow="Work With Me"
+            title="Brand partnerships + collaborations"
+            subtitle="Demo placeholder. This becomes a dedicated page with media kit, rates, examples, and contact form."
+          />
+          <div className="mt-6 grid gap-4 md:grid-cols-3">
+            {["Sponsored posts", "Recipe development", "UGC + short-form"].map((t) => (
+              <div key={t} className="rounded-2xl border border-black/10 bg-white/70 p-5 shadow-sm backdrop-blur">
+                <div className="text-sm font-semibold">{t}</div>
+                <p className="mt-2 text-sm text-black/70">
+                  Clear deliverables, cozy aesthetic, and a family-first audience.
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section id="shop" className="mt-12 md:mt-16">
+          <SectionTitle
+            eyebrow="Shop"
+            title="Favorites + recommendations"
+            subtitle="Demo placeholder. This becomes a curated shop page with affiliate disclosures and category filters."
+          />
+          <div className="mt-6 rounded-3xl border border-black/10 bg-white/70 p-6 shadow-sm backdrop-blur">
+            <p className="text-sm md:text-base text-black/70">
+              Add your “favorites” collections here (kitchen, home, beauty, family).
+            </p>
+          </div>
+        </section>
+
+        <section id="contact" className="mt-12 md:mt-16">
+          <SectionTitle
+            eyebrow="Contact"
+            title="Say hello"
+            subtitle="Demo placeholder. This becomes a real contact page + form + social links."
+          />
+          <div className="mt-6 rounded-3xl border border-black/10 bg-white/70 p-6 shadow-sm backdrop-blur">
+            <p className="text-sm md:text-base text-black/70">
+              For now, the Subscribe form below is your main capture. A contact form can be added here later.
+            </p>
           </div>
         </section>
 
